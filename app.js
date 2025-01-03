@@ -34,11 +34,7 @@ function animateSlides() {
       triggerHook: 0.25,
       reverse: false,
     })
-      .addIndicators({
-        colorStart: "white",
-        colorTrigger: "white",
-        name: "slide",
-      })
+
       .setTween(slideTl)
       .addTo(controller);
 
@@ -54,12 +50,7 @@ function animateSlides() {
       duration: "100%",
       triggerHook: 0,
     })
-      .addIndicators({
-        colorStart: "red",
-        colorTrigger: "red",
-        name: "page",
-        indent: "100",
-      })
+
       .setPin(slide, { pushFollowers: false })
       .setTween(pageTl)
       .addTo(controller);
@@ -198,12 +189,7 @@ function detailAnimation() {
     })
       .setPin(slide, { pushFollowers: false })
       .setTween(slideTl)
-      .addTo(controller)
-      .addIndicators({
-        colorStart: "white",
-        colorTrigger: "yellow",
-        name: "DetailScene",
-      });
+      .addTo(controller);
   });
 }
 
